@@ -4,6 +4,8 @@
  */
 package loginobjetos;
 
+import proyecto.frmregistro;
+
 /**
  *
  * @author AdminSena
@@ -14,7 +16,7 @@ public class LoginObjetos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new frmregistro().setVisible(true);
     }
     
 }
