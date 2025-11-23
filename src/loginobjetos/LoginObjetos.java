@@ -4,7 +4,7 @@
  */
 package loginobjetos;
 
-import proyecto.frmregistro;
+import views.frmregistro;
 
 /**
  *
