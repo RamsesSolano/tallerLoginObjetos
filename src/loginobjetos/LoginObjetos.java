@@ -4,7 +4,7 @@
  */
 package loginobjetos;
 
-import views.frmregistro;
+import views.*;
 
 /**
  *
@@ -16,7 +16,8 @@ public class LoginObjetos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        new frmregistro().setVisible(true);
+        // new frmregistro().setVisible(true);
+        new frmlogin().setVisible(true);
     }
     
 }

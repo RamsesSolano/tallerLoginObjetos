@@ -12,7 +12,7 @@ import java.awt.*;
  * @author AdminSena
  */
 public class frmregistro extends javax.swing.JFrame {
-
+    
     private final JButton sendButton; 
     private final JLabel nameLabel;
     private final JLabel lastNameLabel;
@@ -29,6 +29,7 @@ public class frmregistro extends javax.swing.JFrame {
      * Creates new form frmregistro
      */
     public frmregistro() {
+        setLayout(null); 
         initComponents();
         setTitle("Registry"); 
         

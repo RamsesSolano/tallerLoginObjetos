@@ -4,19 +4,54 @@
  */
 package views;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import javax.swing.*;
+
 /**
  *
  * @author AdminSena
  */
 public class frmlogin extends javax.swing.JFrame {
 
+    public final JLabel usernameLabel; 
+    public final JTextField usernameField; 
+    public final JLabel passwordLabel;
+    public final JTextField passwordField; 
+    public final JButton loginButton; 
+    
     /**
      * Creates new form frmlogin
      */
     public frmlogin() {
         initComponents();
+        setLayout(null);
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
+        
+        this.usernameLabel = new JLabel("Username");
+        this.passwordLabel = new JLabel("Password");
+        this.usernameField = new JTextField();
+        this.passwordField = new JTextField();
+        this.loginButton = new JButton("Login");
+        
+        Toolkit toolkit = Toolkit.getDefaultToolkit();
+        Dimension screenSize = toolkit.getScreenSize();
+        
+        this.usernameLabel.setBounds( 15, 15, screenSize.width, 25 ); 
+        this.usernameField.setBounds( 15, 55, screenSize.width, 25 ); 
+        this.passwordLabel.setBounds(15, 95, screenSize.width, 25);
+        this.passwordField.setBounds(15, 135, screenSize.width, 25);
+        this.loginButton.setBounds(15, 175, screenSize.width, 25);
+        
+        add(this.usernameField); 
+        add(this.usernameLabel);
+        add(this.passwordField);
+        add(this.passwordLabel);
+        add(this.loginButton);
+        
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,41 +76,6 @@ public class frmlogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(frmlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(frmlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(frmlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(frmlogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new frmlogin().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
