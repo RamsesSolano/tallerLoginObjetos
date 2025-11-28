@@ -14,12 +14,13 @@ import javax.swing.*;
  */
 public class frmlogin extends javax.swing.JFrame {
 
-    public final JLabel usernameLabel; 
-    public final JTextField usernameField; 
-    public final JLabel passwordLabel;
-    public final JTextField passwordField; 
-    public final JButton loginButton; 
-    
+    private final JLabel emailLabel; 
+    private final JTextField emailField; 
+    private final JLabel passwordLabel;
+    private final JTextField passwordField; 
+    private final JButton loginButton; 
+    private final JButton registerButton;
+
     /**
      * Creates new form frmlogin
      */
@@ -28,30 +29,56 @@ public class frmlogin extends javax.swing.JFrame {
         setLayout(null);
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         
-        this.usernameLabel = new JLabel("Username");
+        this.emailLabel = new JLabel("Email");
         this.passwordLabel = new JLabel("Password");
-        this.usernameField = new JTextField();
+        this.emailField = new JTextField();
         this.passwordField = new JTextField();
         this.loginButton = new JButton("Login");
-        
+        this.registerButton = new JButton("Register");
+
         Toolkit toolkit = Toolkit.getDefaultToolkit();
         Dimension screenSize = toolkit.getScreenSize();
         
-        this.usernameLabel.setBounds( 15, 15, screenSize.width, 25 ); 
-        this.usernameField.setBounds( 15, 55, screenSize.width, 25 ); 
+        this.emailLabel.setBounds( 15, 15, screenSize.width, 25 ); 
+        this.emailField.setBounds( 15, 55, screenSize.width, 25 ); 
         this.passwordLabel.setBounds(15, 95, screenSize.width, 25);
         this.passwordField.setBounds(15, 135, screenSize.width, 25);
         this.loginButton.setBounds(15, 175, screenSize.width, 25);
-        
-        add(this.usernameField); 
-        add(this.usernameLabel);
+        this.registerButton.setBounds(15, 215, screenSize.width, 25);
+
+        add(this.emailField); 
+        add(this.emailLabel);
         add(this.passwordField);
         add(this.passwordLabel);
-        add(this.loginButton);
+        add(this.loginButton);                                      
+        add(this.registerButton);
         
     }
 
-    
+    public JButton getLoginButton() {
+        return loginButton;
+    }
+
+    public JButton getRegisterButton() {
+        return registerButton;
+    }
+
+    public JTextField getPasswordField() {
+        return passwordField;
+    }
+
+    public JTextField getEmailField() {
+        return emailField;
+    }
+
+    public JLabel getEmailLabel() {
+        return emailLabel;
+    }
+
+    public JLabel getPasswordLabel() {
+        return passwordLabel;
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -4,6 +4,7 @@
  */
 package loginobjetos;
 
+import controllers.LoginController;
 import views.*;
 
 /**
@@ -16,8 +17,10 @@ public class LoginObjetos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // new frmregistro().setVisible(true);
-        new frmlogin().setVisible(true);
+        frmlogin loginView = new frmlogin();
+        LoginController loginController = new LoginController(loginView);
+        loginView.setVisible(true);
+        System.out.println(loginController);
     }
     
 }

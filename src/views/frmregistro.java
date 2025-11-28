@@ -31,7 +31,8 @@ public class frmregistro extends javax.swing.JFrame {
     public frmregistro() {
         setLayout(null); 
         initComponents();
-        setTitle("Registry"); 
+        setTitle("Registry");
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
         
         this.sendButton = new JButton("Register");
         this.nameLabel = new JLabel("Name");
@@ -58,7 +59,9 @@ public class frmregistro extends javax.swing.JFrame {
         this.emailField.setBounds(15, 215, screenSize.width - 40, 25);
         this.passwordLabel.setBounds(15, 255, screenSize.width - 40, 25);
         this.passwordField.setBounds(15, 295, screenSize.width - 40, 25);
-        this.sendButton.setBounds(15, 335, screenSize.width - 40, 25);
+        this.userTypeComboBoxLabel.setBounds(15, 335, screenSize.width - 40, 25);
+        this.userTypeComboBox.setBounds(15, 375, screenSize.width - 40, 25);
+        this.sendButton.setBounds(15, 415, screenSize.width - 40, 25);
         
         add( this.nameLabel );
         add( this.nameField ); 
@@ -76,6 +79,52 @@ public class frmregistro extends javax.swing.JFrame {
         
         
     }
+
+    public JButton getSubmitButton() {
+        return sendButton;
+    }
+
+    public JTextField getNameField() {
+        return nameField;
+    }
+
+    public JTextField getLastNameField() {
+        return lastNameField;
+    }
+
+    public JTextField getEmailField() {
+        return emailField;
+    }
+
+    public JTextField getPasswordField() {
+        return passwordField;
+    }
+
+    public JComboBox getUserTypeComboBox() {
+        return userTypeComboBox;
+    }
+
+    public JLabel getNameLabel() {
+        return nameLabel;
+    }
+
+    public JLabel getLastNameLabel() {
+        return lastNameLabel;
+    }
+
+    public JLabel getEmailLabel() {
+        return emailLabel;
+    }
+
+    public JLabel getPasswordLabel() {
+        return passwordLabel;
+    }
+
+    public JLabel getUserTypeComboBoxLabel() {
+        return userTypeComboBoxLabel;
+    }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
